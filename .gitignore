@@ -10,6 +10,28 @@
 *.njsproj
 *.sln
 
+# Paket yöneticisi lock dosyaları (opsiyonel, ekibine göre değişebilir)
+package-lock.json
+package.json
+yarn.lock
+pnpm-lock.yaml
+
+# Çevresel ayarlar (örnek: firebase, custom config)
+*.env.json
+*.local.json
+*.secret.json
+
+# Geçici veya derleme çıktısı olan JSON dosyaları
+*.tmp.json
+*.cache.json
+*.test-results.json
+
+# Angular cache klasöründeki json'lar
+.angular/cache/**/*.json
+
+# IDE'ye özel ayar json'ları
+
+.vscode/*.json
 # Node modülleri
 /node_modules
 
