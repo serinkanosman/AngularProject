@@ -1,0 +1,9 @@
+<div *ngIf="task$ | async as task; else noTask">
+    <h2 class="text-2xl font-bold mb-4">Görev Detayı</h2>
+    <p><strong>Başlık:</strong> {{ task.title }}</p>
+    <p><strong>Durum:</strong> {{ task.isCompleted ? 'Tamamlandı' : 'Tamamlanmadı' }}</p>
+  </div>
+  <ng-template #noTask>
+    <p>Görev bulunamadı.</p>
+  </ng-template>
+  

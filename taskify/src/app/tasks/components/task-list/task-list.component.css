@@ -1,0 +1,71 @@
+/* Add your CSS styles for the task list component here */
+.task-list {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .task-list h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .task-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-list li:hover {
+    background-color: #e9ecef;
+  }
+  
+  .task-list input[type="checkbox"] {
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .task-list a {
+    flex-grow: 1;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .task-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .task-list button {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .task-list button:hover {
+    background-color: #c82333;
+  }
+  

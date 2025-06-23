@@ -1,0 +1,39 @@
+<div class="task-list">
+  <h2>Görevler</h2>
+
+  <div style="margin-bottom: 16px;">
+    <div style="font-size: 1rem; margin-bottom: 4px;">
+      Tamamlanan: {{ completedCount }} / Toplam: {{ completedCount + uncompletedCount }}
+      <span style="float:right;">%{{ progress }}</span>
+    </div>
+    <div style="background: #e5e7eb; border-radius: 8px; height: 16px; width: 100%; overflow: hidden;">
+      <div [style.width]="progress + '%'" style="background: #2563eb; height: 100%; transition: width 0.3s;"></div>
+    </div>
+  </div>
+
+  <h3 style="color: #2563eb; margin-top: 24px;">Bitmemiş Görevler</h3>
+  <ul>
+    <li *ngFor="let task of uncompletedTasks">
+      <input
+        type="checkbox"
+        [checked]="task.isCompleted"
+        (change)="taskService.toggleTaskCompletion(task.id)"
+      />
+      <a [routerLink]="['/tasks', task.id]">{{ task.title }}</a>
+      <button (click)="taskService.removeTask(task.id)">Sil</button>
+    </li>
+  </ul>
+
+  <h3 style="color: #16a34a; margin-top: 24px;">Bitmiş Görevler</h3>
+  <ul>
+    <li *ngFor="let task of completedTasks">
+      <input
+        type="checkbox"
+        [checked]="task.isCompleted"
+        (change)="taskService.toggleTaskCompletion(task.id)"
+      />
+      <a [routerLink]="['/tasks', task.id]" style="text-decoration: line-through; color: #16a34a;">{{ task.title }}</a>
+      <button (click)="taskService.removeTask(task.id)">Sil</button>
+    </li>
+  </ul>
+</div>

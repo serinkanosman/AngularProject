@@ -1,0 +1,16 @@
+<form [formGroup]="taskForm" (ngSubmit)="addTask()" class="task-form">
+    <div>
+      <label for="title">Görev Başlığı</label>
+      <input id="title" type="text" formControlName="title" required />
+    </div>
+  
+    <div>
+      <label for="description">Açıklama</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+  
+    <button type="submit" [disabled]="taskForm.invalid">Görev Ekle</button>
+  </form>
+  
+  <hr />
+  

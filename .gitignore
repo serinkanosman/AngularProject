@@ -1,0 +1,43 @@
+# Angular build output
+/dist
+/out-tsc
+
+# IDE ve editör dosyaları
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Node modülleri
+/node_modules
+
+# Geçici dosyalar
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+*.tsbuildinfo
+
+# MacOS sistem dosyaları
+.DS_Store
+
+# test coverage sonuçları
+/coverage
+
+# çevresel dosyalar
+.env
+.env.*.local
+
+# Angular cache
+.angular
+
+# Compiled SCSS, LESS veya diğer derlenmiş CSS dosyaları
+*.css.map
+*.js.map
+
+# output logs
+logs
+*.lo*
